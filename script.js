@@ -6,4 +6,6 @@ form.addEventListener('submit',(e)=>{
 	e.preventDefault();
     document.cookie = `fontsize=${input.value}`;
     document.cookie = `fontcolor=${color.value}`;
+	document.body.style.fontSize = input.value + "px";
+    document.body.style.color = color.value;
 })
