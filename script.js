@@ -6,20 +6,20 @@ window.onload = function () {
   const cookies = document.cookie.split("; ");
   cookies.forEach(cookie => {
     const [key, value] = cookie.split("=");
-    if (key === "fontsize") {
-      fontSize.value = value;
-      document.body.style.fontSize = value + "px";
+    if (key === "input") {
+      input.value = value;
+      document.body.style.input = value + "px";
     }
-    if (key === "fontcolor") {
-      fontColor.value = value;
+    if (key === "color") {
+      color.value = value;
       document.body.style.color = value;
     }
   });
 };
 form.addEventListener('submit',(e)=>{
 	e.preventDefault();
-    document.cookie = `fontsize=${input.value}`;
-    document.cookie = `fontcolor=${color.value}`;
-	document.body.style.fontSize = input.value + "px";
+    document.cookie = `input=${input.value}`;
+    document.cookie = `color=${color.value}`;
+	document.body.style.input = input.value + "px";
     document.body.style.color = color.value;
 })
